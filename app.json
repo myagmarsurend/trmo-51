@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "trmo-51",
-    "slug": "trmo-51",
+    "name": "income-and-expenditure",
+    "slug": "trmo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -10,16 +10,25 @@
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#254745"
     },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mega01.trmo",
+      "icon": "./assets/images/adaptive-icon.png"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "backgroundColor": "#254745"
+      },
+      "package": "com.mega01.trmo",
+      "permissions": [
+        "NOTIFICATIONS"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -27,10 +36,43 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Commissioner-Regular.ttf"
+          ]
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/icon.png",
+          "color": "#333333"
+        }
+      ],
+      "expo-asset",
+      "expo-secure-store"
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "0969a75e-74f9-4d87-a7ff-7a3f65ab956a"
+      },
+      "clerkPublishableKey": "pk_test_c29jaWFsLXBlcmNoLTk4LmNsZXJrLmFjY291bnRzLmRldiQ"
+    },
+    "owner": "mega01"
   }
 }
